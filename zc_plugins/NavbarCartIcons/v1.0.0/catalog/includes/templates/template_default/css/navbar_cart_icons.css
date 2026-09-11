@@ -1,0 +1,46 @@
+/*
+ * Navbar Cart Icons -- storefront stylesheet.
+ *
+ * Linked into <head> by the plugin on every page that shows the icons. The
+ * spacing, size and colors are NOT here: they come from the admin settings
+ * and are written as one inline rule by the plugin, so they win over these
+ * defaults. So is the rule that keeps the row on one line, because it
+ * carries the breakpoint read from the navbar itself.
+ *
+ * To take over completely, copy this file to your template's css/ directory
+ * (includes/templates/YOUR_TEMPLATE/css/navbar_cart_icons.css) -- the plugin
+ * links that copy instead of this one -- and switch off "Load The Plugin
+ * Stylesheet?" if you would rather set the spacing and colors in CSS too.
+ */
+
+/* Each icon is a 44px touch target, the size Apple's and Google's guidelines
+   ask for, with the glyph centered in it. position:relative anchors the
+   optional count badge. */
+#navbarCartIcons .nav-link {
+    position: relative;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    line-height: 44px;
+    padding: 0 0.25rem;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* The optional item count, top right of the cart icon. */
+#navbarCartIcons .nciCount {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    min-width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    padding: 0 0.3em;
+    border-radius: 0.6em;
+    background: #d9534f;
+    color: #ffffff;
+    font-size: 0.5em;
+    font-weight: 700;
+    text-align: center;
+}

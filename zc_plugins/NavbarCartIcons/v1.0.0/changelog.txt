@@ -1,0 +1,43 @@
+Navbar Cart Icons -- changelog
+==============================
+
+v1.0.0
+------
+First release.
+
+Puts a Shopping Cart icon and a Checkout icon beside the hamburger button of
+a ZCA Bootstrap navbar, on the screen sizes where the navbar is collapsed,
+whenever the cart has something in it. A customer on a phone no longer has
+to open the menu to get to the cart or to checkout. Install it from Plugin
+Manager and they are there; nothing in your template is edited, copied or
+overridden, and uninstalling puts everything back.
+
+Added
+- One codebase for Zen Cart v1.5.8 through v3.0.0 and PHP 7.4 through 8.5,
+  verified against all six release branches rather than assumed.
+- Works with ZCA Bootstrap (3.3.0 through 3.8.0) and with clones of it, with
+  nothing to configure. The icons follow the navbar's own breakpoint, so a
+  template that expands its navbar at a different size still gets them
+  exactly when it shows its hamburger.
+- The icons link to the same two pages ZCA Bootstrap's own menu entries do,
+  built with the same calls, and carry the same labels, so a store that has
+  reworded or translated Shopping Cart and Checkout is followed.
+- Each icon is a 44px touch target with finger room between them and before
+  the hamburger; both are admin settings.
+- Keeps everything on one line: a store name, logo or trademark ahead of the
+  icons shrinks and clips with an ellipsis rather than pushing the hamburger
+  onto a second line on a narrow phone or a large-text setting. Can be
+  switched off.
+- Admin settings for which icons show, whether the cart icon shows on an
+  empty cart, an optional item-count badge, the Font Awesome classes of both
+  icons, the color, hover color, size and spacing.
+- The stylesheet can be overridden from your template (put a
+  navbar_cart_icons.css in its css/ directory) or switched off entirely if
+  you would rather style #navbarCartIcons yourself.
+- A page that already carries id="navbarCartIcons" -- a template holding a
+  hand edit of the same thing -- is left alone, so you can install first and
+  remove the edit when convenient.
+- Self-contained readme.html shipped with the plugin and linked, with the
+  GitHub project page, as buttons in the Plugin Manager info panel.
+- Idempotent installer. Settings you have changed are never reset by an
+  upgrade; labels and help text are refreshed to the current version.

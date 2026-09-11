@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navbar Cart Icons &mdash; Read Me</title>
+<style>
+:root{
+  --bg:#ffffff; --fg:#1f2328; --muted:#57606a; --rule:#d8dee4;
+  --panel:#f6f8fa; --accent:#0969da; --warn-bg:#fff8c5; --warn-br:#d4a72c;
+  --code-bg:#f0f2f4;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --rule:#30363d;
+    --panel:#161b22; --accent:#4493f8; --warn-bg:#2d2200; --warn-br:#9e6a03;
+    --code-bg:#161b22;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+     font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:52rem;margin:0 auto;padding:2rem 1.25rem 5rem}
+header{border-bottom:1px solid var(--rule);padding-bottom:1.25rem;margin-bottom:1.5rem}
+h1{font-size:1.75rem;margin:0 0 .3rem}
+.tagline{color:var(--muted);margin:0}
+.meta{color:var(--muted);font-size:.875rem;margin:.75rem 0 0}
+.meta a{color:var(--accent)}
+h2{font-size:1.25rem;margin:2.5rem 0 .75rem;padding-top:1.25rem;border-top:1px solid var(--rule)}
+h3{font-size:1.02rem;margin:1.75rem 0 .5rem}
+p,ul,ol{margin:0 0 1rem}
+ul,ol{padding-left:1.4rem}
+li{margin:.3rem 0}
+a{color:var(--accent)}
+code{background:var(--code-bg);padding:.12em .38em;border-radius:4px;
+     font:.87em/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{background:var(--panel);border:1px solid var(--rule);border-radius:6px;
+    padding:.85rem 1rem;overflow-x:auto;margin:0 0 1rem}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;width:100%;margin:0 0 1.25rem;font-size:.94rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--rule);padding:.45rem .65rem;text-align:left;vertical-align:top}
+th{background:var(--panel);white-space:nowrap}
+td:first-child{white-space:nowrap}
+.note{background:var(--panel);border-left:4px solid var(--accent);
+      border-radius:0 6px 6px 0;padding:.8rem 1rem;margin:0 0 1.25rem}
+.warn{background:var(--warn-bg);border-left:4px solid var(--warn-br);
+      border-radius:0 6px 6px 0;padding:.8rem 1rem;margin:0 0 1.25rem}
+.note p:last-child,.warn p:last-child{margin-bottom:0}
+nav{background:var(--panel);border:1px solid var(--rule);border-radius:6px;
+    padding:.9rem 1rem;margin:0 0 1.5rem}
+nav p{margin:0 0 .4rem;font-weight:600;font-size:.9rem}
+nav ul{margin:0;padding-left:1.2rem;columns:2;column-gap:2rem}
+nav li{margin:.15rem 0;font-size:.92rem;break-inside:avoid;page-break-inside:avoid}
+footer{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--rule);
+       color:var(--muted);font-size:.875rem}
+.layout{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.82rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Navbar Cart Icons</h1>
+  <p class="tagline">Puts a Shopping Cart icon and a Checkout icon beside the hamburger button of a ZCA Bootstrap navbar, on phones and tablets, whenever the cart has something in it. No template file is changed.</p>
+  <p class="meta">
+    By My Zen Cart Host (dbltoe) &nbsp;&middot;&nbsp;
+    Version 1.0.0 &nbsp;&middot;&nbsp; Zen Cart v1.5.8 &ndash; v3.0.0 &nbsp;&middot;&nbsp;
+    GPL-2.0 &nbsp;&middot;&nbsp;
+    <a href="https://github.com/dbltoe/Navbar_Cart_Icons" target="_blank" rel="noopener noreferrer">github.com/dbltoe/Navbar_Cart_Icons</a>
+  </p>
+</header>
+
+<nav>
+  <p>On this page</p>
+  <ul>
+    <li><a href="#what">What it does</a></li>
+    <li><a href="#why">Why it exists</a></li>
+    <li><a href="#install">Installing</a></li>
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#oneline">Keeping everything on one line</a></li>
+    <li><a href="#styling">Styling</a></li>
+    <li><a href="#howitworks">How it works</a></li>
+    <li><a href="#handedit">Coming from a hand edit</a></li>
+    <li><a href="#upgrade">Upgrading the plugin</a></li>
+    <li><a href="#uninstall">Uninstalling</a></li>
+    <li><a href="#trouble">Troubleshooting</a></li>
+    <li><a href="#compat">Compatibility</a></li>
+  </ul>
+</nav>
+
+<h2 id="what">What it does</h2>
+
+<p>On a phone or tablet, where ZCA Bootstrap collapses its navigation into a hamburger, it puts two icons right beside that hamburger as soon as the cart has something in it:</p>
+
+<pre class="layout">  Phone, something in the cart:
+
+  Hare Do            [cart] [card] [&#9776;]
+
+  Phone, empty cart:
+
+  Hare Do                          [&#9776;]
+
+  Desktop: nothing changes. The navbar is expanded and its own
+  Shopping Cart and Checkout links are in view.</pre>
+
+<p>The cart icon opens the shopping cart page and the card icon goes straight into checkout &mdash; the same two pages ZCA Bootstrap's own <em>Shopping Cart</em> and <em>Checkout</em> menu entries lead to, built with the same calls and carrying the same labels. A customer no longer has to open the menu to get to either.</p>
+
+<p>Each icon is a 44px touch target with finger room between them and before the hamburger. Install it and they're there. Nothing to configure unless you want to.</p>
+
+<h2 id="why">Why it exists</h2>
+
+<p>ZCA Bootstrap collapses the whole navigation into the hamburger on a phone, including the <em>Shopping Cart</em> and <em>Checkout</em> links it adds once something is in the cart. So the two things a buying customer most wants are two taps away and out of sight. A client asked for the cart and checkout icons to sit next to the hamburger instead, where every other shopping app puts them.</p>
+
+<p>The first version was a hand edit of the template's <code>tpl_header.php</code>. It worked, and it would have been lost the next time the template was updated. So it became this plugin: the same icons, injected into the rendered page with no template file touched, on any ZCA Bootstrap store, on Zen Cart v1.5.8 through v3.0.0.</p>
+
+<h2 id="install">Installing</h2>
+
+<ol>
+  <li>Upload the <code>zc_plugins/NavbarCartIcons/</code> directory from this package so it lands at <code>&lt;your store&gt;/zc_plugins/NavbarCartIcons/v1.0.0/</code>. Nothing goes anywhere else.</li>
+  <li>In your admin, go to <strong>Modules &rarr; Plugin Manager</strong>, select <strong>Navbar Cart Icons</strong>, and click <strong>Install</strong>.</li>
+  <li>Open your storefront on a phone (or narrow the browser window) and add something to the cart. The icons are beside the hamburger.</li>
+</ol>
+
+<p>The installer creates a <strong>Navbar Cart Icons</strong> group under <strong>Configuration</strong>. If the menu entry doesn't show straight away, log out of the admin and back in; Zen Cart caches the menu per session.</p>
+
+<div class="note"><p>Your store needs to be running <strong>ZCA Bootstrap</strong> (3.3.0 or later) or a clone of it. On responsive_classic or any other template the plugin installs fine and does nothing at all: there's no hamburger of that kind to sit beside.</p></div>
+
+<h2 id="settings">Settings</h2>
+
+<p><strong>Configuration &rarr; Navbar Cart Icons.</strong> Thirteen settings; the defaults are right for most stores.</p>
+
+<h3>The switch</h3>
+<table>
+<tr><th>Setting</th><th>Default</th><th>What it does</th></tr>
+<tr><td>Enable Navbar Cart Icons?</td><td><code>true</code></td><td>Master switch. <code>false</code> hides the icons everywhere without uninstalling; Plugin Manager then lists the plugin as <em>Navbar Cart Icons - Mod Not Turned On</em>.</td></tr>
+</table>
+
+<h3>What is shown</h3>
+<table>
+<tr><th>Setting</th><th>Default</th><th>What it does</th></tr>
+<tr><td>Show The Shopping Cart Icon?</td><td><code>true</code></td><td>The first icon, linking to the shopping cart page.</td></tr>
+<tr><td>Show The Checkout Icon?</td><td><code>true</code></td><td>The second icon, linking straight into checkout. Only ever shown while the cart has something in it.</td></tr>
+<tr><td>Show The Cart Icon When The Cart Is Empty?</td><td><code>false</code></td><td><code>false</code> matches ZCA Bootstrap's own menu, which lists Shopping Cart and Checkout only once there's something in the cart. <code>true</code> shows the cart icon on every page regardless; the checkout icon still waits for an item.</td></tr>
+<tr><td>Show The Item Count On The Cart Icon?</td><td><code>false</code></td><td><code>true</code> adds a small badge with the number of items in the cart, and adds the count to the icon's accessible name.</td></tr>
+<tr><td>Shopping Cart Icon Class:</td><td><code>fas fa-shopping-cart</code></td><td>The Font Awesome classes for the cart icon. Any icon your template's Font Awesome includes: <code>fas fa-shopping-basket</code>, <code>fas fa-shopping-bag</code>. Letters, digits, spaces and hyphens only.</td></tr>
+<tr><td>Checkout Icon Class:</td><td><code>fas fa-credit-card</code></td><td>The Font Awesome classes for the checkout icon: <code>fas fa-cash-register</code>, <code>fas fa-money-check</code>.</td></tr>
+</table>
+
+<h3>How it looks</h3>
+<table>
+<tr><th>Setting</th><th>Default</th><th>What it does</th></tr>
+<tr><td>Keep Everything On One Line?</td><td><code>true</code></td><td>Lets a store name, logo or trademark ahead of the icons shrink and clip with an ellipsis rather than push the icons and the hamburger onto a second line. See <a href="#oneline">below</a>.</td></tr>
+<tr><td>Load The Plugin Stylesheet?</td><td><code>true</code></td><td>Links the plugin's small stylesheet and applies the four settings below. <code>false</code> if you'd rather style <code>#navbarCartIcons</code> from your own template CSS.</td></tr>
+<tr><td>Icon Color:</td><td><em>empty</em></td><td>Any CSS color. Empty means the navbar's own link color. A value that doesn't look like a color is ignored.</td></tr>
+<tr><td>Icon Hover Color:</td><td><em>empty</em></td><td>The color under a pointer or keyboard focus. Empty means the navbar's own hover color.</td></tr>
+<tr><td>Icon Size:</td><td><code>1.5rem</code></td><td>Any CSS size. The touch target stays at least 44px square whatever the size.</td></tr>
+<tr><td>Space Between The Icons:</td><td><code>10px</code></td><td>The gap between the two icons, and between the last icon and the hamburger.</td></tr>
+</table>
+
+<p>If you set an icon color, check its contrast against your navbar; an icon nobody can see isn't much of a shortcut.</p>
+
+<h2 id="oneline">Keeping everything on one line</h2>
+
+<p>The navbar is a wrapping flex container. Whatever your template puts ahead of the icons &mdash; a brand, a logo, the <strong>Trademark</strong> plugin's mark &mdash; has a fixed width, and on a 320px phone, or with a large-text setting, brand + icons + hamburger can exceed the bar. Bootstrap then wraps the hamburger onto a second line, which looks broken.</p>
+
+<p>With <strong>Keep Everything On One Line?</strong> on, the plugin gives the navbar's first item a zero flex basis and lets it clip: it takes whatever room is left and shows an ellipsis when that isn't enough, and the icons and the hamburger never move. This applies only while the navbar is collapsed, so the desktop layout is untouched.</p>
+
+<p>If your brand is an image that mustn't be clipped, switch the setting off and size the image yourself, or hide just its text on tiny screens from your template CSS. A store whose logo already carries the name can use:</p>
+
+<pre><code>@media (max-width: 359.98px) {
+  #navMain nav.navbar:has(#navbarCartIcons) .tradeMark { font-size: 0; }
+}</code></pre>
+
+<h2 id="styling">Styling</h2>
+
+<p>Spacing, size and colors come from the settings and are written into the page as one inline rule just before <code>&lt;/head&gt;</code>. Everything else is in the stylesheet:</p>
+
+<pre><code>zc_plugins/NavbarCartIcons/v1.0.0/catalog/includes/templates/template_default/css/navbar_cart_icons.css</code></pre>
+
+<p>Three ways to change it, in increasing order of commitment:</p>
+
+<ol>
+  <li><strong>Use the settings.</strong> Color, hover color, size and spacing cover most needs.</li>
+  <li><strong>Add rules to your template's own CSS.</strong> The plugin's link and inline rule go into <code>&lt;head&gt;</code> after your template's stylesheets, so a plain <code>#navbarCartIcons .nav-link</code> rule of yours loses on order. Raise the specificity and yours wins: <code>#navMain #navbarCartIcons .nav-link { color: #9a044f; }</code></li>
+  <li><strong>Take over the stylesheet.</strong> Copy <code>navbar_cart_icons.css</code> into <code>includes/templates/YOUR_TEMPLATE/css/</code>. The plugin checks there first and links that copy instead of its own. Then, if you'd rather set colors and spacing in CSS too, switch <strong>Load The Plugin Stylesheet?</strong> off.</li>
+</ol>
+
+<p>What the plugin inserts is one Bootstrap nav list, <code>&lt;ul id="navbarCartIcons" class="navbar-nav flex-row ml-auto d-lg-none"&gt;</code>, holding one <code>nav-item</code> per icon, each a <code>nav-link</code> with the icon inside it and the label as its <code>title</code> and <code>aria-label</code>. The <code>d-lg-none</code> comes from the navbar's own <code>navbar-expand-lg</code> class, so a template that expands at a different size gets a matching <code>d-md-none</code> or <code>d-xl-none</code>.</p>
+
+<h2 id="howitworks">How it works</h2>
+
+<p>No Zen Cart notifier fires inside the header template, and a plugin can't override a template file. So the plugin opens an output buffer at <code>NOTIFY_HTML_HEAD_END</code> (just before <code>&lt;/head&gt;</code>), closes it at <code>NOTIFY_FOOTER_END</code> (just before <code>&lt;/body&gt;</code>), and on the way out finds the navbar's toggler button and inserts the icons immediately ahead of it. Both notifiers exist on every Zen Cart release from v1.5.8 and in ZCA Bootstrap's own templates. On a request with nothing to show &mdash; an empty cart, with the empty-cart icon off &mdash; no buffer is opened at all.</p>
+
+<p>Nothing is added to a page that already carries an element with <code>id="navbarCartIcons"</code>, which is what lets a template with a hand edit of the same thing coexist with the plugin.</p>
+
+<h2 id="handedit">Coming from a hand edit</h2>
+
+<p>If you added the icons to your template by hand before this plugin existed:</p>
+
+<ol>
+  <li><strong>Install the plugin first.</strong> It sees the hand edit's <code>#navbarCartIcons</code> and adds nothing, so nothing changes on the storefront yet.</li>
+  <li>Remove the hand edit from your cloned template's <code>tpl_header.php</code>, and any <code>#navbarCartIcons</code> rules from its CSS &mdash; or keep the CSS if you prefer it to the settings, with its specificity raised.</li>
+  <li>Reload. The plugin's icons are now the ones you see, in the same spot.</li>
+</ol>
+
+<p>There's never a moment with no icons showing.</p>
+
+<h2 id="upgrade">Upgrading the plugin</h2>
+
+<ol>
+  <li>Upload the new version directory alongside the old one, so <code>zc_plugins/NavbarCartIcons/</code> holds both. Don't delete the old one yet; Plugin Manager needs both to offer the upgrade.</li>
+  <li><strong>Modules &rarr; Plugin Manager &rarr; Upgrade.</strong></li>
+  <li>Once it reports success, the old version directory can be deleted.</li>
+</ol>
+
+<p>Your settings survive an upgrade. Labels and help text are refreshed to the current version; values you've changed are never touched.</p>
+
+<h2 id="uninstall">Uninstalling</h2>
+
+<p><strong>Modules &rarr; Plugin Manager &rarr; Navbar Cart Icons &rarr; Uninstall.</strong> This removes the configuration group, all of its settings, and the admin menu entry. No template file was ever changed, so there's nothing else to undo. To remove the code as well, delete <code>zc_plugins/NavbarCartIcons/</code> afterwards.</p>
+
+<p>To hide the icons without uninstalling, set <strong>Enable Navbar Cart Icons?</strong> to <code>false</code>.</p>
+
+<h2 id="trouble">Troubleshooting</h2>
+
+<h3>The icons don't appear</h3>
+<ul>
+  <li>Is there something in the cart? With an empty cart nothing shows unless <strong>Show The Cart Icon When The Cart Is Empty?</strong> is <code>true</code>.</li>
+  <li>Is <strong>Enable Navbar Cart Icons?</strong> <code>true</code>?</li>
+  <li>Are you looking at a phone-sized window? On a desktop the navbar is expanded and the icons are hidden by design.</li>
+  <li>View the page source and search for <code>navbarCartIcons</code>. If it's there but invisible, set <strong>Icon Color</strong>: the icons are probably the same color as the bar.</li>
+  <li>If it isn't in the source, the plugin didn't find a ZCA Bootstrap navbar (a <code>&lt;nav&gt;</code> with the <code>navbar</code> class holding a <code>navbar-toggler</code> button). On responsive_classic or any other template the plugin does nothing.</li>
+</ul>
+
+<h3>The icons show as empty boxes</h3>
+<p>The Font Awesome class names you entered don't exist in the Font Awesome version your template loads. The defaults are known to both Font Awesome 5 and 6; check any others on fontawesome.com for your version.</p>
+
+<h3>The hamburger dropped onto a second line</h3>
+<p><strong>Keep Everything On One Line?</strong> is <code>false</code>, or your navbar's first item isn't the one taking the room. See <a href="#oneline">Keeping everything on one line</a>.</p>
+
+<h3>The stylesheet 404s</h3>
+<p>Zen Cart's shipped <code>zc_plugins/.htaccess</code> denies everything then explicitly re-allows <code>.css</code>, <code>.js</code> and <code>.html</code>, so on a normal Apache host the stylesheet (and this Read Me) are served from the plugin directory. If your server ignores <code>.htaccess</code> &mdash; nginx, LiteSpeed without compatibility mode, Apache with <code>AllowOverride None</code> &mdash; you may need a rule permitting those types under <code>zc_plugins/</code>.</p>
+
+<h3>After upgrading, the old styling is still showing</h3>
+<p>Browsers cache the stylesheet for up to an hour. A hard reload (Ctrl+F5) clears it. Each plugin version lives in its own directory, so a new version is always a new URL.</p>
+
+<h3>The admin menu entry is missing after installing</h3>
+<p>Log out and back in. If it's still missing, uninstall and re-install; that rewrites the <code>admin_pages</code> record.</p>
+
+<h2 id="compat">Compatibility</h2>
+
+<table>
+<tr><th>Zen Cart</th><td>v1.5.8 through v3.0.0-dev, one codebase, verified against all six release branches</td></tr>
+<tr><th>PHP</th><td>7.4 through 8.5</td></tr>
+<tr><th>Templates</th><td>ZCA Bootstrap 3.3.0&ndash;3.8.0 and clones of it. Anything else: the plugin does nothing.</td></tr>
+<tr><th>Database</th><td>Thirteen rows in <code>configuration</code> and one group. No tables of its own.</td></tr>
+<tr><th>Assets</th><td>One stylesheet, served from the plugin directory. No JavaScript, no CDN, no external services.</td></tr>
+</table>
+
+<footer>
+<p>Navbar Cart Icons v1.0.0 &middot; My Zen Cart Host (dbltoe) &middot; GNU General Public License v2.0. As always, no warranty or guarantee is applied or implied. Always make backups before adding or editing any mod.</p>
+</footer>
+
+</div>
+</body>
+</html>
