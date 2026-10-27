@@ -1,6 +1,21 @@
 Navbar Cart Icons -- changelog
 ==============================
 
+v1.0.1
+------
+Plugin Manager only. Nothing changes on the storefront or in the settings.
+
+Changed
+- New Settings button in Plugin Manager. Once the plugin is installed, its
+  info panel has a Settings button that opens Configuration > Navbar Cart
+  Icons. It isn't shown before Install or after Uninstall. The installer
+  saves the panel again at Install, Upgrade and Uninstall, because v1.5.8,
+  v2.0 and v2.1 otherwise keep the panel they saw first.
+- The buttons are one row: ReadMe | Settings | Forum Thread | GitHub ("Read
+  Me" is now "ReadMe"; the forum link, once there's a support thread, is a
+  "Forum Thread" button in the row), a little narrower so all four fit on
+  one line from a 1366px window up.
+
 v1.0.0
 ------
 First release.

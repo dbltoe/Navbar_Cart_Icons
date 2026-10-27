@@ -3,6 +3,25 @@
 All notable changes to this project are recorded here. This project follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] — 2026-10-27
+
+Plugin Manager only. Nothing changes on the storefront or in the settings.
+
+### Changed
+
+- **New Settings button in Plugin Manager.** Once the plugin is installed, its
+  info panel has a Settings button that opens Configuration > Navbar Cart
+  Icons directly. It isn't shown before Install or after Uninstall, and it
+  works on every supported release (v1.5.8 through v3.0.0): the installer
+  saves the panel again at Install, Upgrade and Uninstall, because v1.5.8,
+  v2.0 and v2.1 otherwise keep the panel they saw first.
+- **The buttons are one row: ReadMe | Settings | Forum Thread | GitHub.**
+  "Read Me" is now "ReadMe", and the forum link, once there's a support
+  thread, is a "Forum Thread" button in the same row instead of a text link
+  on a line of its own. The buttons are a little narrower (8px side padding,
+  4px gaps), so all four fit on one line from a 1366px-wide window up and the
+  Author line stays where it was.
+
 ## [1.0.0] — 2026-09-11
 
 First release.
@@ -45,4 +64,5 @@ uninstalling puts everything back.
 - While the plugin is switched off, Plugin Manager lists it as *Navbar Cart
   Icons - Mod Not Turned On*, on every supported release.
 
+[1.0.1]: https://github.com/dbltoe/Navbar_Cart_Icons/releases/tag/v1.0.1
 [1.0.0]: https://github.com/dbltoe/Navbar_Cart_Icons/releases/tag/v1.0.0

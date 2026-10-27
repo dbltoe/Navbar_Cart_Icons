@@ -1,4 +1,4 @@
-# Navbar Cart Icons 1.0.0
+# Navbar Cart Icons 1.0.1
 
 An encapsulated Zen Cart plugin that puts a **Shopping Cart** icon and a
 **Checkout** icon beside the hamburger button of a ZCA Bootstrap navbar, on

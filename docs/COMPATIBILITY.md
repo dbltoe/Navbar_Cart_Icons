@@ -158,8 +158,10 @@ the *Mod Not Turned On* notice in the name would freeze on those releases. The
 plugin's `admin/includes/functions/extra_functions/navbar_cart_icons_admin.php`,
 which those releases load on every admin page, corrects the stored name on the
 Plugin Manager page when it disagrees with `NAVBAR_CART_ICONS_STATUS`, and the
-uninstaller puts the plain name back. The same reasoning is why nothing
-state-dependent is in `pluginDescription`.
+uninstaller puts the plain name back. The same reasoning applies to
+`pluginDescription`: its one state-dependent part, the Settings button, is
+correct on those releases only because the installer saves the description
+again at Install, Upgrade and Uninstall.
 
 ### `zen_config()` is not used
 
