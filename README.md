@@ -1,4 +1,4 @@
-# Navbar Cart Icons 1.0.1
+# Navbar Cart Icons 1.0.2
 
 An encapsulated Zen Cart plugin that puts a **Shopping Cart** icon and a
 **Checkout** icon beside the hamburger button of a ZCA Bootstrap navbar, on
@@ -88,8 +88,9 @@ info panel.
 
 ## Support
 
-Questions and bug reports go in the plugin's thread on the Zen Cart forum,
-which Plugin Manager links from the plugin's info panel once it exists.
+Questions and bug reports go in the plugin's support thread on the Zen Cart
+forum, which the Forum Thread button in Plugin Manager also opens:
+https://www.zen-cart.com/threads/207454?page=1#post-1347785
 
 ## Legal stuff
 

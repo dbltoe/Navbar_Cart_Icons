@@ -45,7 +45,7 @@ Spacing, size and colors come from the settings and are written into the page
 as one inline rule just before `</head>`:
 
 ```html
-<link rel="stylesheet" href="/zc_plugins/NavbarCartIcons/v1.0.1/catalog/includes/templates/template_default/css/navbar_cart_icons.css">
+<link rel="stylesheet" href="/zc_plugins/NavbarCartIcons/v1.0.2/catalog/includes/templates/template_default/css/navbar_cart_icons.css">
 …
 <style id="navbarCartIconsStyle">#navbarCartIcons{margin-right:10px}#navbarCartIcons .nav-item+.nav-item{margin-left:10px}#navbarCartIcons .nav-link{font-size:1.5rem}@media (max-width:991.98px){#navMain nav.navbar>:first-child:not(.navbar-toggler):not(.navbar-collapse):not(#navbarCartIcons){flex:1 1 0;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}</style>
 ```
@@ -53,7 +53,7 @@ as one inline rule just before `</head>`:
 Everything else is in the stylesheet:
 
 ```
-zc_plugins/NavbarCartIcons/v1.0.1/catalog/includes/templates/template_default/css/navbar_cart_icons.css
+zc_plugins/NavbarCartIcons/v1.0.2/catalog/includes/templates/template_default/css/navbar_cart_icons.css
 ```
 
 It's short: each link is a 44px-square block with the glyph centered, and the

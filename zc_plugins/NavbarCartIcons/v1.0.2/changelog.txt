@@ -1,6 +1,15 @@
 Navbar Cart Icons -- changelog
 ==============================
 
+v1.0.2
+------
+Plugin Manager only. Nothing changes on the storefront or in the settings.
+
+Changed
+- New Forum Thread button in Plugin Manager, opening this plugin's support
+  thread on the Zen Cart forum. The row is now ReadMe | Settings | Forum
+  Thread | GitHub. On v1.5.8, v2.0 and v2.1 it appears after Upgrade.
+
 v1.0.1
 ------
 Plugin Manager only. Nothing changes on the storefront or in the settings.

@@ -3,6 +3,18 @@
 All notable changes to this project are recorded here. This project follows
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.2] — 2026-10-28
+
+Plugin Manager only. Nothing changes on the storefront or in the settings.
+
+### Changed
+
+- **New Forum Thread button in Plugin Manager**, opening this plugin's
+  support thread on the Zen Cart forum
+  (https://www.zen-cart.com/threads/207454). The row is now
+  ReadMe | Settings | Forum Thread | GitHub. On v1.5.8, v2.0 and v2.1 it
+  appears after Upgrade, when the installer saves the panel again.
+
 ## [1.0.1] — 2026-10-27
 
 Plugin Manager only. Nothing changes on the storefront or in the settings.
@@ -64,5 +76,6 @@ uninstalling puts everything back.
 - While the plugin is switched off, Plugin Manager lists it as *Navbar Cart
   Icons - Mod Not Turned On*, on every supported release.
 
+[1.0.2]: https://github.com/dbltoe/Navbar_Cart_Icons/releases/tag/v1.0.2
 [1.0.1]: https://github.com/dbltoe/Navbar_Cart_Icons/releases/tag/v1.0.1
 [1.0.0]: https://github.com/dbltoe/Navbar_Cart_Icons/releases/tag/v1.0.0

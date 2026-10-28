@@ -32,25 +32,24 @@ if (!defined('IS_ADMIN_FLAG')) {
  * Upgrade and Uninstall). The one state-dependent part, the Settings button,
  * is handled below.
  */
-$nciPluginDir = 'zc_plugins/NavbarCartIcons/v1.0.1/';
+$nciPluginDir = 'zc_plugins/NavbarCartIcons/v1.0.2/';
 $nciReadmeUrl = (defined('DIR_WS_CATALOG') ? DIR_WS_CATALOG : '/') . $nciPluginDir . 'readme.html';
 $nciGithubUrl = 'https://github.com/dbltoe/Navbar_Cart_Icons';
 
 /**
  * The Zen Cart forum's support thread for this plugin.
  *
- * It should be set BEFORE THE FIRST RELEASE, not after, on purpose. On
- * v1.5.8, v2.0 and v2.1 the description is captured on the first scan and
- * never refreshed, so a link added later would reach nobody on half the
- * supported range short of an uninstall and re-install. An empty string
- * renders nothing at all.
+ * On v1.5.8, v2.0 and v2.1 the description is captured on the first scan
+ * and otherwise never refreshed; this plugin's installer saves it again at
+ * Install, Upgrade and Uninstall, so a store gets the link on its next
+ * Upgrade. An empty string renders nothing at all.
  *
- * The forum runs on XenForo, whose thread address is /threads/<id>/; that
- * page opens on the first post, which is the authoritative description of
- * the plugin. The older /showthread.php?t=<id> form no longer resolves to
- * the same thread, so don't use it.
+ * The forum's thread address is /threads/<id>; the permalink below opens on
+ * the first post, which is the authoritative description of the plugin. The
+ * older /showthread.php?t=<id> form no longer resolves to the same thread,
+ * so don't use it.
  */
-$nciForumUrl = '';
+$nciForumUrl = 'https://www.zen-cart.com/threads/207454?page=1#post-1347785';
 
 /**
  * "Installed, but switched off."
@@ -136,7 +135,7 @@ $nciLinks =
     . '</div>';
 
 return [
-    'pluginVersion' => 'v1.0.1',
+    'pluginVersion' => 'v1.0.2',
     'pluginName' => $nciName,
     'pluginDescription' =>
         'Puts a Shopping Cart icon and a Checkout icon beside the hamburger button of '

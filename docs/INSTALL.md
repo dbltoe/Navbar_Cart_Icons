@@ -18,7 +18,7 @@ zc_plugins/NavbarCartIcons/
 Upload it so it lands at:
 
 ```
-<your store root>/zc_plugins/NavbarCartIcons/v1.0.1/
+<your store root>/zc_plugins/NavbarCartIcons/v1.0.2/
 ```
 
 That directory should contain `manifest.php`, `readme.html`, `changelog.txt`,
@@ -154,7 +154,7 @@ yourself: see [CUSTOMIZING.md](CUSTOMIZING.md).
 View source and check this URL loads:
 
 ```
-zc_plugins/NavbarCartIcons/v1.0.1/catalog/includes/templates/template_default/css/navbar_cart_icons.css
+zc_plugins/NavbarCartIcons/v1.0.2/catalog/includes/templates/template_default/css/navbar_cart_icons.css
 ```
 
 Zen Cart's shipped `zc_plugins/.htaccess` denies everything then explicitly
