@@ -153,7 +153,7 @@ return [
     // column is written only by the INSERT that first creates the row, so it
     // has to be right the first time a store installs. Zero until the Library
     // accepts the listing and assigns one.
-    'pluginId' => 0,
+    'pluginId' => 3014,
     'zcVersions' => ['v158', 'v200', 'v210', 'v220', 'v230', 'v300'],
     'changelog' => 'changelog.txt',
     'github_repo' => $nciGithubUrl,
